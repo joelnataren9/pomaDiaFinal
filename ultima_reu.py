@@ -16,3 +16,7 @@ class Budget(object):
       "debit": []
     }
 
+
+def substract_expense(self, expense):
+    self.expense = self.expense - expense
+    self.total_money = self.total_money - expense
