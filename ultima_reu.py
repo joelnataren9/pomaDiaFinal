@@ -28,13 +28,22 @@ class Budget(object):
     out_str = "Total Money so far ${:.2f}\n\n Income: ${:.2f}\n Expenses: ${:.2f}".format(self.total_money, self.income, self.expense)
     return out_str
 
-
-p = Budget(10, 100)
-print(p)
-
 def main():
     budget = float(input("Enter new budget"))
     newBudget = Budget(0,0, budget)
-
+    
+    decision = str(input("Would you like to proceed? Yes(Y) or No(N)"))
+                   
+    while decision == "Y":
+      action = str(input("Would you like to add a new Income(I) or Expense(E)"))
+    
+      if(action == "I"):
+        # addIncome(newBudget)
+      ##elif(action == "E"):
+        ##addExpense(newBudget)
+        
+      decision = str(input("Would you like to proceed? Yes(Y) or No(N)"))
+    
+    
 if __name__ == '__main__':
   main()
