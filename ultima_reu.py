@@ -5,10 +5,9 @@
 ###
 ###
 class Budget(object):
-  def __init__(self, expense=0, income=0, budget=0) -> None:
-    self.budget =0.0
+  def __init__(self, expense=0, income=0.0) -> None:
     self.expense = 0
-    self.income = 0
+    self.income = 0.0
     self.total_money = self.income - self.expense
     self.expense_types = {}
     self.income_types = {}
@@ -16,12 +15,16 @@ class Budget(object):
       "credit": [],
       "debit": []
     }
-  # def addIncome(self, newBudget = Budget()):
+    def addIncome(self, newBudget = Budget()):
+      income = int(input("Insert income: "))
+      self.income += income
+      
+      
     
     
 def main():
     budget = float(input("Enter new budget"))
-    newBudget = Budget(0,0, budget)
+    newBudget = Budget(0,budget)
     
     decision = str(input("Would you like to proceed? Yes(Y) or No(N)"))
                    
