@@ -16,10 +16,24 @@ class Budget(object):
       "credit": [],
       "debit": []
     }
+  def addIncome(self, newBudget = Budget()):
     
 def main():
     budget = float(input("Enter new budget"))
     newBudget = Budget(0,0, budget)
+    
+    decision = str(input("Would you like to proceed? Yes(Y) or No(N)"))
+                   
+    while decision == "Y":
+      action = str(input("Would you like to add a new Income(I) or Expense(E)"))
+    
+      if(action == "I"):
+        addIncome(newBudget)
+      ##elif(action == "E"):
+        ##addExpense(newBudget)
+        
+      decision = str(input("Would you like to proceed? Yes(Y) or No(N)"))
+    
     
 if __name__ == '__main__':
   main()
