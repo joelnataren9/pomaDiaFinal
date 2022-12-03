@@ -37,7 +37,7 @@ def main():
     while decision == "Y":
       action = str(input("Would you like to add a new Income(I) or Expense(E)"))
     
-      if(action == "I"):
+      # if(action == "I"):
         # addIncome(newBudget)
       ##elif(action == "E"):
         ##addExpense(newBudget)
