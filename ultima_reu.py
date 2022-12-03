@@ -12,10 +12,9 @@ class Purchase(object):
     self.product_name = name_of_product
 
 class Budget(object):
-  def __init__(self, expense=0, income=0, budget=0) -> None:
+  def __init__(self, expense=0, income=0) -> None:
     self.expense = float(expense)
     self.income = float(income)
-    self.budget = float(budget)
     self.total_money = self.income - self.expense
     self.expense_types = {}
     self.income_types = {}
@@ -28,15 +27,19 @@ class Budget(object):
     out_str = "Total Money so far ${:.2f}\n\n Income: ${:.2f}\n Expenses: ${:.2f}".format(self.total_money, self.income, self.expense)
     return out_str
 
+  def addIncome(self, newBudget = Budget()):
+    income = int(input("Insert income: "))
+    self.income += income
+
 def main():
     budget = float(input("Enter new budget"))
-    newBudget = Budget(0,0, budget)
-    
+    newBudget = Budget(0,budget)
+
     decision = str(input("Would you like to proceed? Yes(Y) or No(N)"))
-                   
+
     while decision == "Y":
       action = str(input("Would you like to add a new Income(I) or Expense(E)"))
-    
+
       # if(action == "I"):
         # addIncome(newBudget)
       ##elif(action == "E"):
