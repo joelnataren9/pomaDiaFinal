@@ -16,7 +16,8 @@ class Budget(object):
       "credit": [],
       "debit": []
     }
-  def addIncome(self, newBudget = Budget()):
+  # def addIncome(self, newBudget = Budget()):
+    
     
 def main():
     budget = float(input("Enter new budget"))
