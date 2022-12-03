@@ -16,3 +16,6 @@ class Budget(object):
       "debit": []
     }
 
+  def __str__(self):
+    out_str = "Total Money so far {}\n\n Income: {}\n Expenses: {}".format(self.total_money, self.income, self.expense)
+    return out_str
